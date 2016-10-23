@@ -21,7 +21,7 @@ def concat(url, filePath, username="", password="", removeHeader=False):
 
     csvIn = csv.reader(response.read().splitlines())
     fileNameTokens = filePath.split('.')
-    fileNameTokens[-2] += datetime.datetime.now().strftime("_%H:%M_%d-%m-%y")
+    fileNameTokens[-2] += datetime.datetime.now().strftime("_%H-%M_%d-%m-%y")
     csvFile = csv.writer(open('.'.join(fileNameTokens), "w"))
 
 
